@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+# SPDX-License-Identifier: Apache-2.0
+
+# http://EditorConfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.sh]
+max_line_length = 80
+
+[*.adoc]
+max_line_length = off
+
+[*.toml]
+max_line_length = 80
+
+[*.{cls,tex}]
+max_line_length = off

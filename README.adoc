@@ -1,0 +1,113 @@
+// SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+// SPDX-License-Identifier: Apache-2.0
+= sdavids-latex-german-job-application
+Sebastian Davids <sdavids@gmx.de>
+// Metadata:
+:description: German job application in LaTeX
+// Settings:
+:sectnums:
+:sectanchors:
+:sectlinks:
+:toc: macro
+:toclevels: 4
+:toc-placement!:
+:figure-caption!:
+:hide-uri-scheme:
+:source-highlighter: rouge
+:rouge-style: github
+// Refs:
+:docker-install-url: https://docs.docker.com/install/
+:jetbrains-latex-install-url: https://plugins.jetbrains.com/plugin/9473-texify-idea
+:mactex-install-url: https://www.tug.org/mactex/mactex-download.html
+:texifier-install-url: https://www.texifier.com
+:texlive-install-url: https://www.tug.org/texlive/acquire-netinstall.html
+:texmaker-install-url: https://www.xm1math.net/texmaker/download.html
+:texstudio-install-url: https://www.texstudio.org/#download
+:vs-code-latex-install-url: https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
+
+ifdef::env-browser[:outfilesuffix: .adoc]
+
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:important-caption: :heavy_exclamation_mark:
+:note-caption: :information_source:
+endif::[]
+
+toc::[]
+
+This repository contains LaTeX classes, commands, and environments for a German job application.
+
+== Development Environment Setup
+
+[#dev-env-installation]
+=== Installation
+
+[#docker]
+==== Docker
+
+Install {docker-install-url}[Docker].
+
+[#exiftool]
+==== exiftool
+
+===== Linux
+
+[,console]
+----
+$ sudo apt-get install exiftool
+----
+
+===== Mac
+
+[,console]
+----
+$ brew install exiftool
+----
+
+[#qpdf]
+==== qpdf
+
+===== Linux
+
+[,console]
+----
+$ sudo apt-get install qpdf
+----
+
+===== Mac
+
+[,console]
+----
+$ brew install qpdf
+----
+
+[#latex-tools]
+=== LaTeX Tools
+
+==== LaTeX Editor
+
+If you need a graphical editor you might want to use:
+
+* {texifier-install-url}[Texifier] (paid)
+* {texmaker-install-url}[Texmaker] (free)
+* {texstudio-install-url}[TeXstudio] (free)
+
+or IDE extensions:
+
+* {jetbrains-latex-install-url}[JetBrains IDEs] (free)
+* {vs-code-latex-install-url}[VS Code] (free)
+
+==== LaTeX Toolchain
+
+[NOTE]
+====
+The link:scripts/latex_pdf_build.sh[build script] does not need a locally installed LaTeX toolchain.
+====
+
+===== Linux
+
+Install {texlive-install-url}[TeX Live] (around 5.5GB).
+
+===== Mac
+
+Install {mactex-install-url}[MacTeX] (around 5.7GB).

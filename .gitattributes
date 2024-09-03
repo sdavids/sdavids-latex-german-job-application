@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+# SPDX-License-Identifier: Apache-2.0
+
+# https://git-scm.com/docs/gitattributes
+
+# https://git-scm.com/docs/gitattributes#__code_text_code
+* text=auto eol=lf
+
+# https://git-scm.com/docs/gitattributes#__code_whitespace_code
+* whitespace=tab-in-indent,trailing-space,tabwidth=2
+
+*.adoc linguist-documentation
+*.sh diff=bash
+
+*.pdf binary -eol -whitespace
+*.png binary -eol -whitespace
+*.ttf binary -eol -whitespace
