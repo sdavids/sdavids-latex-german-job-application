@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+# SPDX-License-Identifier: Apache-2.0
+
+# https://git-scm.com/docs/gitignore
+
+### Temporary ###
+*~
+
+### vim ###
+*.sw[a-p]
+
+### Git ###
+*.orig
+
+### Mac ###
+.DS_Store
+
+### Windows ###
+desktop.ini
+Thumbs.db
+
+### Jetbrains ###
+.fleet/
+.idea/
+jffi*.dylib
+
+### Visual Studio Code ###
+.vscode/
+
+### LaTeX
+*.pdf
+build/

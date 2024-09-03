@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+# shellcheck shell=sh
+
+# SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+# SPDX-License-Identifier: Apache-2.0
+
+set -eu
+
+if [ -z "${GIT_REFLOG_ACTION+x}" ]; then
+  git stash --quiet --include-untracked --keep-index
+
+  trap 'git stash pop --quiet 2>/dev/null' EXIT INT QUIT TSTP
+fi
+
+readonly base_dir="$PWD"
+
+scripts/shellscript_format_check.sh "${base_dir}"
+scripts/shellscript_check.sh "${base_dir}"
+
+yamllint --strict .
