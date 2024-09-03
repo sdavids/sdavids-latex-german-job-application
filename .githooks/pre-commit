@@ -1,0 +1,58 @@
+#!/usr/bin/env sh
+
+# shellcheck shell=sh
+
+# SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+# SPDX-License-Identifier: Apache-2.0
+
+# _shellcheck needs to be in $PATH
+# https://www.shellcheck.net
+#   Mac:
+#     brew install shellcheck
+#   Linux:
+#     sudo apt-get install shellcheck
+
+# shfmt needs to be in $PATH
+# https://github.com/mvdan/sh
+#   Mac:
+#     brew install shfmt
+#   Linux:
+#     sudo apt-get install shfmt
+
+# yamllint needs to be in $PATH
+# https://yamllint.readthedocs.io/en/stable/
+#   Mac:
+#     brew install yamllint
+#   Linux:
+#     sudo apt-get install yamllint
+
+set -u
+
+if [ -z "${GIT_REFLOG_ACTION+x}" ]; then
+  git stash --quiet --include-untracked --keep-index
+
+  trap 'git stash pop --quiet 2>/dev/null' EXIT INT QUIT TSTP
+fi
+
+git_root="$(git rev-parse --show-toplevel)"
+cd "${git_root}" || exit 1
+unset git_root
+
+diff="$(find .githooks -type f -print0 | xargs -0 shfmt --diff --indent 2 --case-indent --binary-next-line --simplify)"
+if [ -n "${diff}" ]; then
+  printf '%s\n' "${diff}" >&2
+  exit 1
+fi
+diff="$(shfmt --diff --indent 2 --case-indent --binary-next-line --simplify .)"
+if [ -n "${diff}" ]; then
+  printf '%s\n' "${diff}" >&2
+  exit 1
+fi
+unset diff
+
+set -e
+
+{ find .githooks -type f -print0 | xargs -0 shellcheck; } >&2
+{ shfmt -l=0 . | xargs -0 shellcheck; } >&2
+
+yamllint --strict . >&2
