@@ -1,0 +1,51 @@
+// SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+// SPDX-License-Identifier: Apache-2.0
+= Coding Style
+Sebastian Davids <sdavids@gmx.de>
+// Metadata:
+:description: coding style
+// Settings:
+:sectnums:
+:sectanchors:
+:sectlinks:
+:toc: macro
+:toc-placement!:
+:hide-uri-scheme:
+
+toc::[]
+
+We use the https://github.com/google/styleguide[Google Style] for all code.
+
+[#ide-configuration]
+== IDE Configuration
+
+=== JetBrains IDEs
+
+Install and enable the following plugins:
+
+* https://plugins.jetbrains.com/plugin/7495--ignore[.ignore]
+* https://plugins.jetbrains.com/plugin/7391-asciidoc[AsciiDoc]
+* https://plugins.jetbrains.com/plugin/9473-texify-idea[TeXiFy]
+
+https://www.jetbrains.com/help/idea/settings-code-style.html#scheme[Import] and enable the following code style scheme:
+
+* https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml
+
+Set text file encoding to `UTF-8` and line delimiters to `Unix and macOS (\n)`:
+
+* https://www.jetbrains.com/help/idea/settings-file-encodings.html[File Encodings]
+* https://www.jetbrains.com/help/idea/settings-code-style.html#line-separators[Line Separators]
+
+=== Visual Studio Code
+
+Install and enable the following extensions:
+
+* https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc]
+* https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop[LaTeX Workshop]
+
+https://code.visualstudio.com/docs/getstarted/settings[User and Workspace Settings]
+
+Set text file encoding to `utf8` and line delimiters to `\n`:
+
+* `files.encoding`
+* `files.eol`
