@@ -1,0 +1,107 @@
+// SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+// SPDX-License-Identifier: Apache-2.0
+= Contributing
+Sebastian Davids <sdavids@gmx.de>
+// Metadata:
+:description: contributing
+// Settings:
+:sectnums:
+:sectanchors:
+:sectlinks:
+:toc: macro
+:toc-placement!:
+:hide-uri-scheme:
+:source-highlighter: rouge
+:rouge-style: github
+// Refs:
+:uri-apache-license: https://www.apache.org/licenses/LICENSE-2.0
+:uri-conventional-commits: https://www.conventionalcommits.org/en/v1.0.0/
+
+ifdef::env-github[]
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+endif::[]
+
+toc::[]
+
+== Contributor License Agreement
+
+*Project License:* Apache License, Version 2.0 (link:LICENSES/Apache-2.0.txt[Apache-2.0.txt] or {uri-apache-license})
+
+* You will only submit contributions where you have authored 100% of the content.
+* You will only submit contributions to which you have the necessary rights.
+This means that if you are employed you have received the necessary permissions from your employer to make the contributions.
+* Whatever content you contribute will be provided under both project licenses.
+
+== Code of Conduct
+
+All contributors are expected to follow our link:CODE_OF_CONDUCT.md[Code of Conduct].
+
+== Developing Features and Fixing Bugs
+
+=== IDE Configuration
+
+See link:CODING_STYLE{outfilesuffix}[].
+
+=== Branching Strategy
+
+We are using the https://docs.github.com/en/get-started/quickstart/github-flow[GitHub Flow], where development happens in branches, which are merged via pull requests.
+Special cases, like fixing problems with the CI pipeline, are of course exempt from this guideline.
+
+Branch names should adhere to the following pattern: `users/username/token/branch-name-by-hyphen`.
+
+We use the following tokens:
+
+* *feat*: A feature
+* *fix*: A bug fix branch
+* *chore*: A cleanup branch
+
+Examples:
+
+ users/gclark/feat/improve-documentation
+ users/chowe/fix/issue-13
+ users/gclark/chore/update-dependencies
+
+=== Commits
+
+As a general rule, the style and formatting of commit messages should follow the {uri-conventional-commits}[Conventional Commits] guidelines.
+
+We use the following types:
+
+* *feat*: A new feature
+* *fix*: A bug fix
+* *chore*: Changes that affect the build system or external dependencies, CI configuration files and scripts
+* *docs*: Documentation only changes
+* *refactor*: A code change that neither fixes a bug nor adds a feature
+* *style*: Changes that do not affect the meaning of the code (white-space, formatting, missing semicolons, etc.)
+* *test*: Adding missing tests or correcting existing tests
+* *revert*: Reverts a previous commit
+
+Because of the noise it generates on the issue, please do _not_ mention the issue number in the message.
+
+Try to fit the summary within the soft 50-character limit.
+
+Examples:
+
+ fix: ensure UTF-8
+ docs: add license
+ style: format
+
+[NOTE]
+====
+There is no requirement for all commits to match the branch token, i.e. a `docs: add license` commit is OK on a `users/chowe/fix/issue-13` branch.
+====
+
+[IMPORTANT]
+====
+Add `[no ci]` to the commit message when the https://docs.github.com/en/actions/managing-workflow-runs/skipping-workflow-runs[CI pipeline should not run].
+====
+
+=== Pull Requests
+
+Pull requests are used to discuss a concrete solution, not the motivation nor requirements for it.
+As such there should be at least one issue a pull request relates to.
+At the same time it should be focused, so it should usually not relate to more than one issue (although that can occasionally happen).
+Please mention all issues in the request's body, possibly using https://help.github.com/articles/closing-issues-via-commit-messages/[closing keywords] like `closes`, `fixes` (for bugs only), or `resolves`.
+
+To enforce the <<Branching Strategy>> pull requests from `main` will be closed.

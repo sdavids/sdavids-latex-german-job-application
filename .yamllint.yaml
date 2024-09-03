@@ -1,0 +1,26 @@
+---
+# SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+# SPDX-License-Identifier: Apache-2.0
+
+# https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration
+
+extends: default
+rules:
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+  comments:
+    require-starting-space: true
+    ignore-shebangs: true
+    min-spaces-from-content: 1
+  empty-lines:
+    max-end: 1
+  float-values:
+    forbid-inf: true
+    forbid-nan: true
+    forbid-scientific-notation: true
+    require-numeral-before-decimal: true
+  indentation:
+    spaces: 2
+  quoted-strings:
+    required: only-when-needed
