@@ -47,7 +47,9 @@ toc::[]
 
 This repository contains LaTeX classes, commands, and environments for a German job application.
 
-germancv:: a link:src/germancv.cls[class] for a German curriculum vitae
+germancv:: a link:src/germancv.cls[class] for a German curriculum vitae; <<examples-germancv, example>>:
++
+image::docs/asciidoc/images/example-cv.png[]
 
 == Usage
 
@@ -272,6 +274,40 @@ image::docs/asciidoc/images/cvsection1.png[]
 ⇓
 
 image::docs/asciidoc/images/cvsection2.png[]
+
+[#examples]
+== Examples
+
+[NOTE]
+====
+Only Docker has to be <<docker, installed>> on your machine for building the examples.
+====
+
+[#examples-germancv]
+=== germancv
+
+Source:: link:src/example-cv.tex[]
+Typeset PDF:: link:examples/example-cv.pdf[]
+Build::
++
+[,console]
+----
+$ scripts/latex-pdf-build.sh -r example-cv.tex
+----
++
+=> `build/example-cv.pdf`
++
+[NOTE]
+====
+You can remove the metadata from the generated PDF via:
+
+[,console]
+----
+$ scripts/pdf-remove-metadata.sh build/example-cv.pdf
+----
+
+=> `build/example-cv.pdf`
+====
 
 == License
 
