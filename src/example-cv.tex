@@ -1,0 +1,115 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8 Unicode
+
+% SPDX-FileCopyrightText: © 2024 Sebastian Davids <sdavids@gmx.de>
+% SPDX-License-Identifier: Apache-2.0
+
+\documentclass{germancv}
+
+\hypersetup{
+    pdfinfo={
+        Author={Max Mustermann},
+        Title={Lebenslauf},
+        Creator={},
+        Producer={}
+    }
+}
+
+\begin{document}
+
+\begin{flushright}
+  \textbf{\large Max Mustermann}\\
+  Musterstraße 1\\
+  12345 Musterstadt\\
+  0123 4567 8901\\
+  max@mustermann.de\\
+  \urlstyle{same}\url{https://mustermann.de}\\
+\end{flushright}
+
+\vspace{3em}
+
+\section*{Persönliches}
+
+Geboren am 29.02.1992 in Musterstadt
+
+\begin{cvsection}{Berufserfahrung}
+  \begin{cvitembold}
+      {seit 01/2025}
+    Sabbatical
+  \end{cvitembold}
+  \begin{cvitemlist}
+      {\range{04/2021}{12/2024}}
+      {Weyland-Yutani Corp.}
+      {Musterstadt}
+      {IT-Projektmanager}
+      {3 Projekte \textendash\ unterschiedlicher Tätigkeitsumfang, Teamgröße und Laufzeit}
+    \item Konzeption, Organisation und Optimierung von Prozessen
+    \item Technische Projektleitung
+    \item Berichte und Dokumentation
+  \end{cvitemlist}
+  \begin{cvitemlist}
+      {\range{10/2020}{12/2020}}
+      {Omni Consumer Products}
+      {Musterdorf}
+      {Software-Entwickler}
+      {}
+    \item Entwicklung einer TODO App
+    \item Vorgehen mit Rational Unified Process
+  \end{cvitemlist}
+  \begin{cvitem}
+      {\range{11/2016}{07/2017}}
+      {Studentenwerk}
+      {Musterstadt}
+      {Werksstudent}
+      {Administration eines Studentenwohnheim-Netzwerkes mit 5 Nutzern}
+  \end{cvitem}
+\end{cvsection}
+
+\begin{cvsection}{Studium und Ausbildung}
+  \begin{cvitemlist}
+      {\range{04/2015}{03/2020}}
+      {Universität}
+      {Musterstadt}
+      {Klassische Philologie}
+      {}
+    \item Nebenfach: Holzwirtschaft
+    \item Abschluss: \textbf{Bachelor of Arts}
+  \end{cvitemlist}
+  \begin{cvitem}
+      {\range{09/2013}{08/2014}}
+      {Altenheim Seniorenparadies}
+      {Musterstadt}
+      {Freiwilliges Soziales Jahr}
+      {}
+  \end{cvitem}
+  \begin{cvitemlist}
+      {\range{08/2003}{05/2013}}
+      {Gymnasium}
+      {Musterstadt}
+      {}
+      {}
+    \item Abschluss: \textbf{Abitur}
+  \end{cvitemlist}
+\end{cvsection}
+
+\pagebreak
+
+\begin{cvsection}{Qualifikationen und Zusätzliches}
+  \begin{cvitemplain}{Sprachkenntnisse}
+    Deutsch: Muttersprache, Esperanto: Grundkenntnisse
+  \end{cvitemplain}
+  \begin{cvitemplain}{IT-Kenntnisse}
+    Lotus 1-2-3: sehr gut, OS/2: sehr gut
+  \end{cvitemplain}
+  \begin{cvitemplain}{Mobilität}
+    Führerschein: Klasse T
+  \end{cvitemplain}
+\end{cvsection}
+
+\vspace{3em}
+
+\begin{flushleft}
+  Musterstadt, \today
+\end{flushleft}
+
+\end{document}

@@ -31,3 +31,4 @@ jffi*.dylib
 ### LaTeX ###
 *.pdf
 build/
+!examples/**/*.pdf
