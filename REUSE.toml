@@ -31,7 +31,9 @@ path = [
   "docs/asciidoc/images/cvitemplain.png",
   "docs/asciidoc/images/cvsection1.png",
   "docs/asciidoc/images/cvsection2.png",
+  "docs/asciidoc/images/example-cv.png",
   "docs/asciidoc/images/range.png",
+  "examples/example-cv.pdf",
 ]
 SPDX-FileCopyrightText = "© 2024 Sebastian Davids <sdavids@gmx.de>"
 SPDX-License-Identifier = "Apache-2.0"
