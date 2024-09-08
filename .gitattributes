@@ -12,5 +12,6 @@
 *.adoc linguist-documentation
 *.sh diff=bash
 
+*.pdf binary -eol -whitespace
 *.png binary -eol -whitespace
 *.ttf binary -eol -whitespace
