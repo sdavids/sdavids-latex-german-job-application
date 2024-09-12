@@ -15,3 +15,5 @@
 
 *.png binary -eol -whitespace
 *.ttf binary -eol -whitespace
+
+src/sdavids-cv.tex binary -eol -whitespace
