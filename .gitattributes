@@ -17,3 +17,4 @@
 *.ttf binary -eol -whitespace
 
 src/sdavids-cv.tex binary -eol -whitespace
+src/sdavids-skills-profile.tex binary -eol -whitespace
