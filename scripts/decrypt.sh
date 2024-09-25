@@ -20,3 +20,4 @@ set -eu
 readonly base_dir="${1:-$PWD}"
 
 sops decrypt -i "${base_dir}/src/sdavids-cv.tex"
+sops decrypt -i "${base_dir}/src/sdavids-qualification-profile.tex"
