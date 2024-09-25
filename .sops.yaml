@@ -8,3 +8,6 @@ creation_rules:
   - path_regex: src/sdavids-cv\.tex$
     age: >-
       age1x9hzzkvxzncvp6gfl8njxcffesvhp5hcgmfsypwkhmss4ghaldvqngpt3s
+  - path_regex: src/sdavids-skills-profile\.tex$
+    age: >-
+      age1x9hzzkvxzncvp6gfl8njxcffesvhp5hcgmfsypwkhmss4ghaldvqngpt3s
