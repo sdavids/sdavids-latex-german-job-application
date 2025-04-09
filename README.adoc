@@ -40,6 +40,14 @@ germancv:: a link:src/germancv.cls[class] for a German curriculum vitae; <<examp
 +
 image::docs/asciidoc/images/example-cv.png[]
 
+germanskillsprofile:: a link:src/germanskillsprofile.cls[class] for a qualification profile; <<examples-germanskillsprofile, example>>:
++
+image::docs/asciidoc/images/example-skills-profile-1.png[]
+
+'''
+
+image::docs/asciidoc/images/example-skills-profile-2.png[]
+
 == Usage
 
 === germancv
@@ -482,6 +490,32 @@ $ scripts/pdf_remove_metadata.sh build/example-cv.pdf
 ----
 
 => `build/example-cv.pdf`
+====
+
+[#examples-germanskillsprofile]
+=== germanskillsprofile
+
+Source:: link:src/example-skills-profile.tex[]
+Typeset PDF:: link:examples/example-skills-profile.pdf[]
+Build::
++
+[,console]
+----
+$ scripts/latex_pdf_build.sh -r example-skills-profile.tex
+----
++
+=> `build/example-skills-profile.pdf`
++
+[NOTE]
+====
+You can remove the metadata from the generated PDF via:
+
+[,console]
+----
+$ scripts/pdf_remove_metadata.sh build/example-skills-profile.pdf
+----
+
+=> `build/example-skills-profile.pdf`
 ====
 
 == Development Environment Setup
