@@ -45,6 +45,17 @@ image::docs/asciidoc/images/example-cv-1.png[]
 .Example CV, p. 2
 image::docs/asciidoc/images/example-cv-2.png[]
 
+germanqualificationprofile:: a link:src/germanqualificationprofile.cls[class] for a qualification profile; <<examples-germanqualificationprofile,example>>:
++
+.Example Qualification Profile, p. 1
+image::docs/asciidoc/images/example-qualification-profile-1.png[]
++
+.Example Qualification Profile, p. 2
+image::docs/asciidoc/images/example-qualification-profile-2.png[]
++
+.Example Qualification Profile, p. 3
+image::docs/asciidoc/images/example-qualification-profile-3.png[]
+
 == Usage
 
 === germancv
@@ -487,6 +498,32 @@ $ scripts/pdf_remove_metadata.sh build/example-cv.pdf
 ----
 
 => `build/example-cv.pdf`
+====
+
+[#examples-germanqualificationprofile]
+=== germanqualificationprofile
+
+Source:: link:src/example-qualification-profile.tex[]
+Typeset PDF:: link:examples/example-qualification-profile.pdf[]
+Build::
++
+[,console]
+----
+$ scripts/latex_pdf_build.sh -r example-qualification-profile.tex
+----
++
+=> `build/example-qualification-profile.pdf`
++
+[NOTE]
+====
+You can remove the metadata from the generated PDF via:
+
+[,console]
+----
+$ scripts/pdf_remove_metadata.sh build/example-qualification-profile.pdf
+----
+
+=> `build/example-qualification-profile.pdf`
 ====
 
 == Development Environment Setup
