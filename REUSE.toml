@@ -29,3 +29,8 @@ SPDX-License-Identifier = "Apache-2.0"
 path = ["src/sdavids-cv.tex", "src/sdavids-qualification-profile.tex"]
 SPDX-FileCopyrightText = "© 2024 Sebastian Davids <sdavids@gmx.de>"
 SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["src/sdavids-cover-letter.tex"]
+SPDX-FileCopyrightText = "© 2025 Sebastian Davids <sdavids@gmx.de>"
+SPDX-License-Identifier = "Apache-2.0"
