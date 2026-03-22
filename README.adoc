@@ -19,6 +19,7 @@ Sebastian Davids <sdavids@gmx.de>
 :docker-install-url: https://docs.docker.com/install/
 :jetbrains-latex-install-url: https://plugins.jetbrains.com/plugin/9473-texify-idea
 :mactex-install-url: https://www.tug.org/mactex/mactex-download.html
+:sops-install-url: https://github.com/getsops/sops/releases
 :texifier-install-url: https://www.texifier.com
 :texlive-install-url: https://www.tug.org/texlive/acquire-netinstall.html
 :texmaker-install-url: https://www.xm1math.net/texmaker/download.html
@@ -531,6 +532,23 @@ $ scripts/pdf_remove_metadata.sh build/example-qualification-profile.pdf
 [#dev-env-installation]
 === Installation
 
+[#age]
+==== age
+
+===== Linux
+
+[,console]
+----
+$ sudo apt-get install age
+----
+
+===== Mac
+
+[,console]
+----
+$ brew install age
+----
+
 [#docker]
 ==== Docker
 
@@ -568,6 +586,20 @@ $ sudo apt-get install qpdf
 [,console]
 ----
 $ brew install qpdf
+----
+
+[#sops]
+==== sops
+
+===== Linux
+
+Install {sops-install-url}[sops].
+
+===== Mac
+
+[,console]
+----
+$ brew install sops
 ----
 
 [#latex-tools]
