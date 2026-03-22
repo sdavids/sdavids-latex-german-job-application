@@ -18,3 +18,5 @@
 set -eu
 
 readonly base_dir="${1:-$PWD}"
+
+sops encrypt -i "${base_dir}/src/sdavids-cv.tex"
